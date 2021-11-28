@@ -1,4 +1,4 @@
-module github.com/d-kolpakov/dbwrap
+module github.com/dhnikolas/dbwrap
 
 go 1.17
 

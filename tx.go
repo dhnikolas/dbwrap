@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/d-kolpakov/dbwrap/errors"
+	"github.com/dhnikolas/dbwrap/errors"
 )
 
 type txk string
