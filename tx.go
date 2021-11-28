@@ -36,3 +36,11 @@ func (w *Wrapper) WithTransaction(ctx context.Context, options *sql.TxOptions, f
 	err = fn(ctx)
 	return err
 }
+
+func (w *Wrapper) getConn(ctx context.Context) Db {
+	if tx, ok := ctx.Value(txKey).(*sql.Tx); ok {
+		return tx
+	}
+
+	return w.db
+}
